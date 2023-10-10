@@ -1,8 +1,9 @@
 # Student Do: Load Data from CSV source and apply basic transformations with Power Query Editor.
 
-**csv: all files in fin_serv_accounts directory**
+**csv: all files in fin_serv_accounts directory**<br>
+[**pbix: d1_s2_student.pbix**](https://github.com/dave-melillo/advanced_powerbi/blob/main/pbix_files/d1_s2_student.pbix
+)
 
-**pbix: d1_s2_student.pbix**
 
 1. Click ‘Get Data’ in the Home Ribbon and select Text/CSV as the source option. <br>
 2. Choose the ‘accounts_base’ csv file to start with. <br>
