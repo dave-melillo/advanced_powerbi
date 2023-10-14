@@ -7,7 +7,7 @@
 
 1. Click ‘Get Data’ in the Home Ribbon and select Text/CSV as the source option. </br>
 2. Choose the ‘recent_append’ csv file and the “Transform Data” option to navigate into the Power Query Editor. 
-3. Now in the Power Query Editor, navigate to the recent_transactions query. 
+3. Now in the Power Query Editor, navigate to the recent_transactions query. </br>
     a. Remove all applied steps up to “Source”
     b. Apply the “Use First Row as Headers” transformation
     c. Change the data type of the date field to date
