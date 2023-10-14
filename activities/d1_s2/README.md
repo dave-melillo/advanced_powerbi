@@ -42,4 +42,4 @@
     c. Accounts should already be related to recent_transactions via account_id, but if not, make the association now<br>
     d. If done correctly, your Model View should resemble the image below<br>
     e.  Challenge: Go back to the Report View and create a new page. On the new page create a Matrix visualization with states.Region and types.desc on the Rows and Sum of           accounts.balance and Sum of transactions.amount on the Values. Expand all of the subsections of the Matrix and confirm that there are values for each desc. 
- ![Alt Text](https://github.com/dave-melillo/advanced_powerbi/blob/main/student_do/d1_s2/images/data_model.png)
+ ![Alt Text](https://github.com/dave-melillo/advanced_powerbi/blob/main/activities/d1_s2/images/data_model.png)
