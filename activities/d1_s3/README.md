@@ -23,6 +23,7 @@
     a. In the “Home” ribbon choose the “Combine” option and the “Merge Queries” sub option</br>
     b. In the “Merge” dialog box, choose “types” as the query to be merged and create an association between type_code_merged in the “accounts” query and “code” in the “types” query </br>
     c. Leave the rest of the settings as-is (reference the image below) and press OK to navigate back to the Power Query Editor</br>
+    ![Alt Text](https://github.com/dave-melillo/advanced_powerbi/blob/main/activities/d1_s3/images/1.png) <br>
     d. Now back in the “accounts” query, press the icon next to the new types field and select the min_bal and max_users options in the sub menu. Refer to image below for assistance. </br>
     e. Optionally, rename these newly Merged columns</br>
     f. Close & Apply Changes</br>
