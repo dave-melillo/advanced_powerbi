@@ -31,7 +31,7 @@
     b. Rename the date field to transaction_date<br>
     c. Create an Age field based on the transaction_date<br>
     d. Create a conditional column called transaction_category as configured below<br>
-![Alt Text](https://github.com/dave-melillo/advanced_powerbi/blob/main/student_do/d1_s2/images/conditional_col.png) <br>
+![Alt Text](https://github.com/dave-melillo/advanced_powerbi/blob/main/activities/d1_s2/images/conditional_col.png) <br>
     e. Close and Apply<br>
     f. Challenge: Create a line chart with transaction_date on the X-Axis and Count of account_id on the Y axis<br>
 10. We now have all of the data sets loaded into Power BI with basic transformations applied. It is time to create a relation amongst all of them so we can quickly and easily create new measures and visuals. <br>
