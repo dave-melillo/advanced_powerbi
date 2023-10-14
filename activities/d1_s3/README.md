@@ -1,46 +1,45 @@
-# Student Do: Load Data from CSV source and apply basic transformations with Power Query Editor.
+# Student Do: Advanced ETL with Power BI
 
 [**csv: all files in fin_serv_accounts directory**](https://github.com/dave-melillo/advanced_powerbi/tree/main/data/fin_serv_accounts)<br>
-[**pbix: d1_s2_student.pbix**](https://github.com/dave-melillo/advanced_powerbi/blob/main/pbix_files/d1_s2_student.pbix
+[**pbix: d1_s2_student.pbix**](https://github.com/dave-melillo/advanced_powerbi/blob/main/pbix_files/d1_s3_student.pbix
 )
 
 
-1. Click ‘Get Data’ in the Home Ribbon and select Text/CSV as the source option. <br>
-2. Choose the ‘accounts_base’ csv file to start with. <br>
-    a. Change the name of query to accounts <br>
-    b. Filter out N/A values in the state field <br>
-    c. Change the Data Type of balance to Decimal or Whole Number <br>
-    d. Extract Text Before Delimiter (-) in the account_tier field <br>
-    e. Change the Data Type of type_code_2 to Text <br>
-    f. Merge type_code_1 and type_code_2 into a new field called type_code_merged <br>
-    g. Close & Apply <br>
-    h. Challenge: Create a simple line chart with created_date on the X axis and Count of account_id on the Y axis. <br>
-3. Click ‘Get Data’ in the Home Ribbon and select Text/CSV as the source option. <br>
-4. Choose the ‘accounts_states’ csv file.<br>
-    a. Change the name of the query to states<br>
-    b. In the Home tab, click the Use First Rows as Headers transformation<br>
-    c. Close & Apply<br>
-    d. Challenge: Create a simple Filled Map with state as Locatiton and Division as Legend<br>
-5. Click ‘Get Data’ in the Home Ribbon and select Text/CSV as the source option. <br>
-6. Choose the ‘accounts_types’ csv file.<br>
-    a. Change the name of the query to types<br>
-    b. Close & Apply<br>
-    c. Challenge: Create a bar chart with desc on the Y-Axis and Average of Max Users on the X-Axis<br>
-7. Click ‘Get Data’ in the Home Ribbon and select Text/CSV as the source option. <br>
-8. Choose the ‘recent_transactions’ csv file.<br>
-    a. Rename the type field to transaction_type<br>
-    b. Rename the date field to transaction_date<br>
-    c. Create an Age field based on the transaction_date<br>
-    d. Create a conditional column called transaction_category as configured below<br>
-![Alt Text](https://github.com/dave-melillo/advanced_powerbi/blob/main/student_do/d1_s2/conditional_col.png) <br>
-    e. Close and Apply<br>
-    f. Challenge: Create a line chart with transaction_date on the X-Axis and Count of account_id on the Y axis<br>
-10. We now have all of the data sets loaded into Power BI with basic transformations applied. It is time to create a relation amongst all of them so we can quickly and easily create new measures and visuals. <br>
-11. Navigate to the Model View<br>
-12. Create the following associations between queries by dragging your mouse from one object to another after highlighting the associated keys<br>
-    a. accounts.state > states.State Code<br>
-    b. accounts.type_code_merged > types.code<br>
-    c. Accounts should already be related to recent_transactions via account_id, but if not, make the association now<br>
-    d. If done correctly, your Model View should resemble the image below<br>
-    e.  Challenge: Go back to the Report View and create a new page. On the new page create a Matrix visualization with states.Region and types.desc on the Rows and Sum of           accounts.balance and Sum of transactions.amount on the Values. Expand all of the subsections of the Matrix and confirm that there are values for each desc. 
- ![Alt Text](https://github.com/dave-melillo/advanced_powerbi/blob/main/student_do/d1_s2/data_model.png)
+1. Click ‘Get Data’ in the Home Ribbon and select Text/CSV as the source option. 
+2. Choose the ‘recent_append’ csv file and the “Transform Data” option to navigate into the Power Query Editor. 
+3. Now in the Power Query Editor, navigate to the recent_transactions query. 
+    a. Remove all applied steps up to “Source”
+    b. Apply the “Use First Row as Headers” transformation
+    c. Change the data type of the date field to date
+    d. In the “Home” ribbon choose the “Combine” option and the “Append Queries” sub option
+    e. In the Append Queries dialog box choose “Two Tables” and recent_append as the value for “Table to append”
+    f. Add in previous transformations on the new appended data set 
+        i. Rename date to transaction_date
+       ii. Add an Age field based of transaction_date
+       iii. Add a conditional column called transaction_category based on the type field
+    g. Close & Apply Changes
+    h. Challenge: Create a line chart with date on the X axis and amount on the Y axis from recent_transactions to confirm append
+4. Navigate back to the Power Query Editor to the “accounts” query
+    a. In the “Home” ribbon choose the “Combine” option and the “Merge Queries” sub option
+    b. In the “Merge” dialog box, choose “types” as the query to be merged and create an association between type_code_merged in the “accounts” query and “code” in the “types” query 
+    c. Leave the rest of the settings as-is (reference the image below) and press OK to navigate back to the Power Query Editor
+    d. Now back in the “accounts” query, press the icon next to the new types field and select the min_bal and max_users options in the sub menu. Refer to image below for assistance. 
+    e. Optionally, rename these newly Merged columns
+    f. Close & Apply Changes
+5. Navigate back to the Power Query Editor
+6. Duplicate the recent_transactions query
+7. Rename this query account_recent_transactions_summary
+8. In the “Transform” ribbon select the Group By option
+    a. In the Group By dialog box, choose Basic, account_id as the Group By column, Count as the New Column Name and Count Rows as the operation
+9. Duplicate the recent_transactions query
+10. Rename this query account_recent_transactions_sum
+11. In the “Transform” ribbon select the Group By option
+    a. In the Group By dialog box, choose Basic, account_id as the Group By column, Sum as the New Column Name, Sum as the operation and amount as the Column.
+12. Navigate back to account_recent_transactions_summary query, choose “Combine” from the Home Ribbon and the Merge Queries sub option
+13. In the Merge dialog, choose account_recent_transactions_sum as the join table and make an association between the account_id in both data sets. Leave the rest of the default configurations and press OK. 
+14. In the new column that appears, click the icon next to the column name and choose only the Sum column to merge into account_recent_transactions_summary
+15. You should now have three columns in account_recent_transactions_summary. Change the name of the Count column to transaction_count and the Sum column to transaction_sum. 
+16. Add a new conditional column called VIP_status with the following configuration
+17. Close & Apply Changes
+18. Challenge: Create a pie chart using the new VIP_status column in account_recent_transactions_summary with VIP_status as the legend and Count of account_id as the Values. 
+
