@@ -1,4 +1,4 @@
-# Student Do: Load Data from CSV source and apply basic transformations with Power Query Editor.
+# Student Do: Core ELT with PowerBI
 
 [**csv: all files in fin_serv_accounts directory**](https://github.com/dave-melillo/advanced_powerbi/tree/main/data/fin_serv_accounts)<br>[**pbix: d1_s2_student.pbix**](https://github.com/dave-melillo/advanced_powerbi/blob/main/pbix_files/d1_s2_student.pbix
 )
