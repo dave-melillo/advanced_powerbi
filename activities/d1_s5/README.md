@@ -37,7 +37,8 @@
         iv. Under R script options, verify that your local R installation is specified in Detected R home directories and that it properly reflects the local R installation you want Power BI Desktop to use. In the following image, the path to the local installation of R is C:\Program Files\R Open\R-3.4.4\.</br>
         v. Once setup is complete, navigate to the Report View and create an R Script Visual</br>
         vi. Drag account_users and balance from the accounts queries to the Values shelf.</br>
-        vii. You will be prompted with the R script editor, where you can enter the script below: </br>
+        vii. You will be prompted with the R script editor, where you can enter the script below: 
+
         ```
                 install.packages("corrplot", repos = "http://cran.us.r-project.org")
                 require("corrplot")
@@ -47,10 +48,9 @@
                 M <- cor(dataset)
 
 
-                corrplot(M, method = "color", t1.cex=0.6, t1.srt=45, t1.col = "black")
-                
+                corrplot(M, method = "color", t1.cex=0.6, t1.srt=45, t1.col = "black")  
         ```
-        </br>
+
         viii. Upon successful execution, your Report View should resemble the below image. </br>
         ![Alt Text](https://github.com/dave-melillo/advanced_powerbi/blob/main/activities/d1_s5/images/6.png) <br>
     b. Python</br>
