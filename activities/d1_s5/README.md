@@ -39,38 +39,37 @@
         vi. Drag account_users and balance from the accounts queries to the Values shelf.</br>
         vii. You will be prompted with the R script editor, where you can enter the script below: 
 
-        ```
-                install.packages("corrplot", repos = "http://cran.us.r-project.org")
-                require("corrplot")
-                library(corrplot)
+```
+install.packages("corrplot", repos = "http://cran.us.r-project.org")
+require("corrplot")
+library(corrplot)
 
+M <- cor(dataset)
 
-                M <- cor(dataset)
+corrplot(M, method = "color", t1.cex = 0.6, t1.srt = 45, t1.col = "black")
+```
 
-
-                corrplot(M, method = "color", t1.cex=0.6, t1.srt=45, t1.col = "black")  
-        ```
-
-        viii. Upon successful execution, your Report View should resemble the below image. </br>
-        ![Alt Text](https://github.com/dave-melillo/advanced_powerbi/blob/main/activities/d1_s5/images/6.png) <br>
+viii. Upon successful execution, your Report View should resemble the below image. </br>
+![Alt Text](https://github.com/dave-melillo/advanced_powerbi/blob/main/activities/d1_s5/images/6.png) <br>
     b. Python</br>
         i. Install Python on your local machine.</br>
         ii. Enable Python scripting in Power BI Desktop.</br>
         iii. Install the pandas and Matplotlib Python libraries.</br>
         iv. You will be prompted with the Python script editor, where you can enter the script below: </br>
-        ```
-                import numpy as np
-                import pandas as pd
-                import matplotlib.pyplot as plt
-                import seaborn as sns
+
+```
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
 
 
-                correlation_matrix = data.corr()
+correlation_matrix = data.corr()
 
 
-                plt.figure(figsize=(10, 8))
-                sns.heatmap(correlation_matrix, annot=True, cmap='coolwarm', fmt='.2f', linewidths=.5)
-                plt.title('Correlation Matrix')
-                plt.show()
-        ```
+plt.figure(figsize=(10, 8))
+sns.heatmap(correlation_matrix, annot=True, cmap='coolwarm', fmt='.2f', linewidths=.5)
+plt.title('Correlation Matrix')
+plt.show()
+```
 
