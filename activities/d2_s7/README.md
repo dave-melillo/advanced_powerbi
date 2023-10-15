@@ -1,7 +1,7 @@
 # Session 7: Build a star schema data model in Power BI.
 
 [**csv: all files in the stocks directory**](https://github.com/dave-melillo/advanced_powerbi/tree/main/data/stocks)<br>
-[**pbix: d1_capstone.pbix**](https://github.com/dave-melillo/advanced_powerbi/blob/main/pbix_files/d2_s7_instructor.pbix
+[**pbix: d2_s7_instructor.pbix**](https://github.com/dave-melillo/advanced_powerbi/blob/main/pbix_files/d2_s7_instructor.pbix
 )
 
 In this capstone project, you will work with Pokémon trading card sales data to build a Power BI report. The project is designed to reinforce the concepts and skills learned on the first day of the course, covering ETL and  visualizations.
