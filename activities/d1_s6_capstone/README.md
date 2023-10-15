@@ -1,7 +1,7 @@
-# Day 1 Capstone
+# Session 6: Day 1 Capstone
 
 [**csv: all files in pokemon directory**](https://github.com/dave-melillo/advanced_powerbi/tree/main/data/pokemon)<br>
-[**pbix: d1_capstone.pbix**](https://github.com/dave-melillo/advanced_powerbi/blob/main/pbix_files/d1_capstone.pbix
+[**pbix: d1_capstone.pbix**](https://github.com/dave-melillo/advanced_powerbi/blob/main/pbix_files/d1_s6_capstone.pbix
 )
 
 In this capstone project, you will work with Pokémon trading card sales data to build a Power BI report. The project is designed to reinforce the concepts and skills learned on the first day of the course, covering ETL and  visualizations.
