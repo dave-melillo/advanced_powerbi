@@ -1,7 +1,7 @@
 # Session 12: Day 2 Capstone
 
 [**csv: all files in the netflix directory**](https://github.com/dave-melillo/advanced_powerbi/tree/main/data/netflix)</br>
-[**pbix: d2_s12_capstone.pbix**](https://github.com/dave-melillo/advanced_powerbi/blob/main/pbix_files/d2_s12_capstone.pbix)</br>
+[**pbix: d2_capstone.pbix**](https://github.com/dave-melillo/advanced_powerbi/blob/main/pbix_files/d2_capstone.pbix)</br>
 
 # Capstone Project: Power BI Report for Netflix Data Analysis
 
