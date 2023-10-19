@@ -60,6 +60,6 @@ Power BI is a versatile and user-friendly tool that enables organizations to har
 - Session 13: Recap and Introduction to the Data Lifecycle
 - Session 14: Sharing with Power BI
 - Session 15: Deployment Pipelines
-- Session 16: OLS vs RLS
+- Session 16: Implementing Row Level Security
 - Session 17: Capstone Work
 - Session 18: Capstone Presentations & Final Recap
