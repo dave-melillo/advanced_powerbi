@@ -1,0 +1,11 @@
+name,id,price,number_of_items,desc
+spider-man,P002,30,1000,licensed - worked with marvel to coincide with newest movie release
+plain,P003,20,1000,original - this is the original band aid and the control for the experiment.
+sponge-bob,P004,30,1000,licensed - worked with nickolodeon
+hello-kitty,P005,30,1000,licensed - worked with sanrio
+water-proof,P006,35,1000,original - this is an existing variation of our original line
+extra-strength,P007,40,1000,original - this is an existing variation of our original line
+green,P008,25,1000,rainbow - this is an example from our rainbow line. this is meant to be an in between option from original to licensed. 
+blue,P009,25,1000,rainbow - this is an example from our rainbow line. this is meant to be an in between option from original to licensed. 
+yellow,P0010,25,1000,rainbow - this is an example from our rainbow line. this is meant to be an in between option from original to licensed. 
+red,P0011,25,1000,rainbow - this is an example from our rainbow line. this is meant to be an in between option from original to licensed. 
